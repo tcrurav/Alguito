@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCkrm7E9QTI9g0U0_QYFH2_HLqt5cr5hzU",
+      authDomain: "trimestre-2.firebaseapp.com",
+      databaseURL: "https://trimestre-2-default-rtdb.firebaseio.com",
+      projectId: "trimestre-2",
+      storageBucket: "trimestre-2.appspot.com",
+      messagingSenderId: "270265419290",
+      appId: "1:270265419290:web:0cf788237204ed96f7f3a3"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <link rel="stylesheet" href="css/one-page-wonder.min.css">
+
+  <script src="js/form_obesity.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Obesidad en Canarias</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Regístrate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Inicia sesión</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead text-center text-white">
+    <div class="masthead-content">
+      <div class="container">
+        <h1 class="masthead-heading mb-0">Obesidad en Canarias</h1>
+        <h2 class="masthead-subheading mb-0">Un proyecto para mejorar la salud de los canarios</h2>
+        <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Aprende más</a>
+      </div>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+  </header>
+
+  <section class="mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <form id="form-obesity">
+            <div class="form-group">
+              <label for="age">Edad:</label>
+              <input type="number" class="form-control" placeholder="Edad" id="age" name="age">
+              <div id="error-age">*edad no válida</div>
+            </div>
+            <div class="form-group">
+              <label for="weight">Peso:</label>
+              <input type="number" class="form-control" placeholder="Peso" id="weight" name="weight" step="0.01">
+              <div id="error-weight">*peso no válido</div>
+            </div>
+            <div class="form-group">
+              <label for="height">Altura:</label>
+              <input type="number" class="form-control" placeholder="Altura" id="height" name="height" step="0.01">
+              <div id="error-height">*altura no válida</div>
+            </div>
+            <div class="form-group">
+              <label for="sample-date">Fecha de la muestra:</label>
+              <input type="date" class="form-control" id="sample-date" name="sample-date">
+              <div id="error-sample-date">*fecha de la muestra no válida</div>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="sex">Hombre
+              </label>
+            </div>
+            <div class="form-check disabled">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="sex">Mujer
+              </label>
+            </div>
+            <div class="form-check disabled">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="sex">Otros
+              </label>
+            </div>
+            <div id="error-sex">*el campo de sexo es obligatorio</div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
