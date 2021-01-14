@@ -92,37 +92,44 @@
               <input type="number" class="form-control" placeholder="Edad" id="age" name="age">
               <div id="error-age">*edad no válida</div>
             </div>
+
             <div class="form-group">
               <label for="weight">Peso:</label>
               <input type="number" class="form-control" placeholder="Peso" id="weight" name="weight" step="0.01">
               <div id="error-weight">*peso no válido</div>
             </div>
+
             <div class="form-group">
               <label for="height">Altura:</label>
               <input type="number" class="form-control" placeholder="Altura" id="height" name="height" step="0.01">
               <div id="error-height">*altura no válida</div>
             </div>
+
             <div class="form-group">
               <label for="sample-date">Fecha de la muestra:</label>
               <input type="date" class="form-control" id="sample-date" name="sample-date">
               <div id="error-sample-date">*fecha de la muestra no válida</div>
             </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="sex">Hombre
-              </label>
+
+            <div class="form-group">
+              <label>Sexo:</label>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="sex">Hombre
+                </label>
+              </div>
+              <div class="form-check disabled">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="sex">Mujer
+                </label>
+              </div>
+              <div class="form-check disabled">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="sex">Otros
+                </label>
+              </div>
+              <div id="error-sex">*el campo de sexo es obligatorio</div>
             </div>
-            <div class="form-check disabled">
-              <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="sex">Mujer
-              </label>
-            </div>
-            <div class="form-check disabled">
-              <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="sex">Otros
-              </label>
-            </div>
-            <div id="error-sex">*el campo de sexo es obligatorio</div>
 
             <button type="submit" class="btn btn-primary">Enviar</button>
           </form>
